@@ -17,6 +17,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "@firebase/app",
+              "@angular/fire/firestore",
+              "@firebase/auth",
+              "firebase/app"
+            ],
             "outputPath": "dist/quizz-factory",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -123,6 +129,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "quizz-factory"
+    }
+  },
+  "defaultProject": "quizz-factory",
+  "cli": {
+    "analytics": "f9964d49-7a46-4100-ba16-bf9271c0026b"
+  }
 }
