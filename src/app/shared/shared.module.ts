@@ -4,11 +4,13 @@ import { RouterModule } from '@angular/router';
 
 import { MaterialModule } from './material/material.module';
 import { ShellComponent } from './shell/shell.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DeleteButtonComponent } from './components/delete-button/delete-button.component';
 const components = [
-  ShellComponent
+  ShellComponent, DashboardComponent, DeleteButtonComponent
 ];
 
-const modules = [CommonModule, RouterModule, MaterialModule]
+const modules = [CommonModule, RouterModule, MaterialModule];
 
 @NgModule({
   declarations: [

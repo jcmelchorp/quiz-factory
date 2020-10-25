@@ -1,0 +1,25 @@
+<mat-card class="outer-card">
+  <mat-card-header>
+    <!-- Slot for the handle -->
+    <ng-content></ng-content>
+    <mat-card-title>
+      {{ quiz.title }}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{ quiz.id }}
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <div class="questions" cdkDropList cdkDropListOrientation="vertical" (cdkDropListDropped)="questionDrop($event)">
+    <div class="inner-card" cdkDrag *ngFor="let question of quiz.questions; let i = index"
+      (click)="openDialog(question, i)">
+      <mat-card [ngClass]="question.label"> {{ question.question }} </mat-card>
+    </div>
+
+    <button mat-stroked-button (click)="openDialog()">
+      <mat-icon>add</mat-icon>
+    </button>
+
+    <app-delete-button (delete)="handleDelete()"></app-delete-button>
+  </div>
+</mat-card>

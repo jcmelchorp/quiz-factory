@@ -1,0 +1,11 @@
+<div cdkDropList cdkDropListOrientation="horizontal" class="quizes" (cdkDropListDropped)="drop($event)">
+  <app-quiz cdkDrag *ngFor="let quiz of quizList" [quiz]="quiz">
+    <mat-icon cdkDragHandle class="handle">drag_indicator</mat-icon>
+  </app-quiz>
+
+  <div class="quiz-button">
+    <button mat-raised-button color="accent" cdkDragDisabled (click)="openQuizDialog()">
+      New Quiz
+    </button>
+  </div>
+</div>

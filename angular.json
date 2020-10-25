@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "quizz-factory": {
+    "quiz-factory": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
               "@firebase/auth",
               "firebase/app"
             ],
-            "outputPath": "dist/quizz-factory",
+            "outputPath": "dist/quiz-factory",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "quizz-factory:build"
+            "browserTarget": "quiz-factory:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "quizz-factory:build:production"
+              "browserTarget": "quiz-factory:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "quizz-factory:build"
+            "browserTarget": "quiz-factory:build"
           }
         },
         "test": {
@@ -120,18 +120,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "quizz-factory:serve"
+            "devServerTarget": "quiz-factory:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "quizz-factory:serve:production"
+              "devServerTarget": "quiz-factory:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "quizz-factory",
+  "defaultProject": "quiz-factory",
   "cli": {
     "analytics": "f9964d49-7a46-4100-ba16-bf9271c0026b"
   }

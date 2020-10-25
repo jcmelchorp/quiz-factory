@@ -1,13 +1,13 @@
 export const environment = {
   production: true,
   firebaseConfig: {
-    apiKey: 'AIzaSyCaEqnuR5Gbx_iAswbXuOBq1597MPUvMP4',
-    authDomain: 'item-crud.firebaseapp.com',
-    databaseURL: 'https://item-crud.firebaseio.com',
-    projectId: 'item-crud',
-    storageBucket: 'item-crud.appspot.com',
-    messagingSenderId: '798810369231',
-    appId: '1:798810369231:web:f5596665b8dc9a3fd55bba',
-    measurementId: 'G-J3EXFJ43Q3'
+    apiKey: 'AIzaSyBpvuKe4tb3CYo7WzRyzoRLG5vuZHPinA0',
+    authDomain: 'escuela-enlinea.firebaseapp.com',
+    databaseURL: 'https://escuela-enlinea.firebaseio.com',
+    projectId: 'escuela-enlinea',
+    storageBucket: 'escuela-enlinea.appspot.com',
+    messagingSenderId: '73768123354',
+    appId: '1:73768123354:web:8b416fd44583010770dee3',
+    measurementId: 'G-BND29H7HHT'
   }
 };

@@ -1,6 +1,54 @@
 {
   "rules": {
-    ".read": "now < 1605938400000",  // 2020-11-21
-    ".write": "now < 1605938400000",  // 2020-11-21
+    ".read": false,
+    ".write": false,
+    "items": {
+      ".read": "root.child('admins').child(auth.uid).val() === true",
+      "$item": {
+        ".write": "auth.uid == $item || root.child('admins').child(auth.uid).val() === true",
+        ".read": "auth.uid == $item || root.child('admins').child(auth.uid).val() === true"
+      }
+    },
+    "customers": {
+      ".read": "root.child('admins').child(auth.uid).val() === true",
+      "$customer": {
+        ".write": "auth.uid == $customer || root.child('admins').child(auth.uid).val() === true",
+        ".read": "auth.uid == $customer || root.child('admins').child(auth.uid).val() === true"
+      }
+    },
+    "boards": {
+      ".read": "root.child('admins').child(auth.uid).val() === true",
+      "$board": {
+        ".write": "auth.uid == $board || root.child('admins').child(auth.uid).val() === true",
+        ".read": "auth.uid == $board || root.child('admins').child(auth.uid).val() === true"
+      }
+    },
+    "tasks": {
+      ".read": "root.child('admins').child(auth.uid).val() === true",
+      "$task": {
+        ".write": "auth.uid == $task || root.child('admins').child(auth.uid).val() === true",
+        ".read": "auth.uid == $task || root.child('admins').child(auth.uid).val() === true"
+      }
+    },
+    "courses": {
+      ".read": "root.child('admins').child(auth.uid).val() === true",
+      "$course": {
+        ".write": "auth.uid == $course || root.child('admins').child(auth.uid).val() === true",
+        ".read": "auth.uid == $course || root.child('admins').child(auth.uid).val() === true"
+      }
+    },
+    "users": {
+      ".read": "root.child('admins').child(auth.uid).val() === true",
+      "$user": {
+        ".write": "auth.uid == $user || root.child('admins').child(auth.uid).val() === true",
+        ".read": "auth.uid == $user || root.child('admins').child(auth.uid).val() === true"
+      }
+    },
+    "admins": {
+      "$admin": {
+        ".write": "root.child('admins').child(auth.uid).val() === true",
+        ".read": "auth.uid == $admin || root.child('admins').child(auth.uid).val() === true"
+      }
+    }
   }
 }

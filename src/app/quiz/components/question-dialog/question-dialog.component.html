@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Question</h1>
+<div mat-dialog-content class="content">
+  <mat-form-field>
+    <textarea placeholder="Make a question" matInput [(ngModel)]="data.question.question"></textarea>
+  </mat-form-field>
+  <br />
+  <mat-button-toggle-group #group="matButtonToggleGroup" [(ngModel)]="data.question.label">
+    <mat-button-toggle *ngFor="let opt of labelOptions" [value]="opt">
+      <mat-icon [ngClass]="opt">{{
+            opt === 'gray' ? 'check_circle' : 'lens'
+          }}</mat-icon>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>
+    {{ data.isNew ? 'Add Question' : 'Update Question' }}
+  </button>
+
+  <app-delete-button (delete)="handleQuestionDelete()" *ngIf="!data.isNew"></app-delete-button>
+</div>
